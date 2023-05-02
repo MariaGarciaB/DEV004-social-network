@@ -1,5 +1,6 @@
 import { onNavigate } from '../router/index';
 import { loginUser, loginGoogle } from '../lib/autenticar';
+import logo from '../img/logo.png';
 
 export const Home = () => {
   const HomeDiv = document.createElement('section');
@@ -13,7 +14,7 @@ export const Home = () => {
   buttonLoginGoogle.textContent = 'Continua con Google';
   buttonLoginGoogle.setAttribute('id', 'idGoogle');
   const header = document.createElement('header');
-  const img = document.createElement('img');
+  const img = document.createElement('src', logo);
   img.setAttribute('src', './img/logo.png');
   img.setAttribute('alt', 'Logo de la marca MaMá Genial');
   img.id = 'logoEncabezado';
