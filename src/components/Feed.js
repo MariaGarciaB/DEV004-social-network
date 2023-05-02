@@ -2,7 +2,7 @@ import { log } from "async";
 import { logOut, crearPost, refPost, db, editRef, actualUser } from "../lib/autenticar";
 import { onNavigate } from "../router/index";
 import { onSnapshot, doc, deleteDoc } from "@firebase/firestore";
-import bannerM from '../img/banner.png';
+import bannerM from '../img/bannerM.png';
 
 
 // CREAR ELEMENTOS DEL MURO

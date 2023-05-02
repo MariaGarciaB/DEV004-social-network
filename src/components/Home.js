@@ -14,8 +14,8 @@ export const Home = () => {
   buttonLoginGoogle.textContent = 'Continua con Google';
   buttonLoginGoogle.setAttribute('id', 'idGoogle');
   const header = document.createElement('header');
-  const img = document.createElement('src', logo);
-  img.setAttribute('src', './img/logo.png');
+  const img = document.createElement('img');
+  img.setAttribute('src', logo);
   img.setAttribute('alt', 'Logo de la marca MaMá Genial');
   img.id = 'logoEncabezado';
   header.appendChild(img);
