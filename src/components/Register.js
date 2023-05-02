@@ -49,13 +49,14 @@ export const Register = () => {
         .then((res) => { // then para promesa cumplida
         // enviarlo al muro
           console.log(res);
+          buttonRegister.addEventListener('click', () => onNavigate('/feed'));
         })
         .catch((error) => { // para promesa fallida
           console.log(error);
         });
     }
   });
-  buttonRegister.addEventListener('click', () => onNavigate('/feed'));
+  
 
   HomeDiv.append(img, h2, inputName, inputEmail, inputPassword, buttonRegister, buttonHome);
 

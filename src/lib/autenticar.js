@@ -107,25 +107,16 @@ export const crearPost = (text) => {
   const docRef = addDoc(collection(db, "post"), {
     comentario: text,
     email: getAuth().currentUser.email,
-    date: date,
+    dateCreate: Timestamp.now(),
   });
 
   return docRef;
 };
 
-const q = query(collection(db, 'post'), orderBy("date", "desc"));
-const date = new Date();
-export const saveTextContent = (post) => {
-  addDoc(collection(db, 'post'), {
-    post, email: auth.currentUser.email, date: date.toLocaleString(),
-  });
+export const refPost = () => {
+  return query(collection(db, "post"), orderBy('dateCreate', 'desc'));
 };
 //console.log("Document written with ID: ", text);
-
-export const refPost = () => {
-  return query(collection(db, "post"));
-};
-
 
 export const editRef = (id, text) => {
 return updateDoc(doc(db, "post", id), text) };
