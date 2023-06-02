@@ -18549,8 +18549,8 @@ const Home = () => {
   buttonLoginGoogle.textContent = "Continua con Google";
   buttonLoginGoogle.setAttribute("id", "idGoogle");
   const header = document.createElement("header");
-  const img = document.createElement("src", logo);
-  img.setAttribute("src", "./img/logo.png");
+  const img = document.createElement("img");
+  img.setAttribute("src", logo);
   img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
   img.id = "logoEncabezado";
   header.appendChild(img);
@@ -19380,13 +19380,12 @@ function waterfall(tasks, callback) {
   nextTask([]);
 }
 awaitify(waterfall);
-const bannerM = "/assets/bannerM.de63a643.png";
 const Feed = () => {
   const HomeDiv = document.createElement("div");
   const header = document.createElement("header");
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
-  img.setAttribute("src", bannerM);
+  img.setAttribute("src", "bannerM.png");
   img.setAttribute("alt", "Banner Mam\xE1 Genial");
   img.id = "banner";
   header.appendChild(img);

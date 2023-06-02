@@ -18537,7 +18537,6 @@ const refPost = () => {
 const editRef = (id2, text) => {
   return mf(mh(db, "post", id2), text);
 };
-const logoEncabezado = "/assets/logo.9df56c4f.png";
 const Home = () => {
   const HomeDiv = document.createElement("section");
   const buttonRegister = document.createElement("button");
@@ -18549,7 +18548,7 @@ const Home = () => {
   buttonLoginGoogle.textContent = "Continua con Google";
   buttonLoginGoogle.setAttribute("id", "idGoogle");
   const header = document.createElement("header");
-  const img = document.createElement("src", logoEncabezado);
+  const img = document.createElement("img");
   img.setAttribute("src", "./img/logo.png");
   img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
   img.id = "logoEncabezado";
@@ -18563,7 +18562,9 @@ const Home = () => {
     loginGoogle().then((credential) => {
       const user = credential.user;
       console.log(user);
-      onNavigate("/feed");
+      if (user !== void 0) {
+        onNavigate("/feed");
+      }
     }).catch((error) => {
       console.log(error);
     });
@@ -18574,7 +18575,14 @@ const Home = () => {
   const inputPassword = document.createElement("input");
   inputPassword.placeholder = "Ingresa tu contrase\xF1a";
   inputPassword.setAttribute("type", "password");
-  article.append(h1, inputEmail, inputPassword, buttonLogin, buttonRegister, buttonLoginGoogle);
+  article.append(
+    h1,
+    inputEmail,
+    inputPassword,
+    buttonLogin,
+    buttonRegister,
+    buttonLoginGoogle
+  );
   main.appendChild(article);
   HomeDiv.appendChild(main);
   buttonRegister.addEventListener("click", () => onNavigate("/register"));

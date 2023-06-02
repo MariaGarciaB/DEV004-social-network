@@ -18549,7 +18549,7 @@ const Home = () => {
   buttonLoginGoogle.setAttribute("id", "idGoogle");
   const header = document.createElement("header");
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/logo.png");
+  img.setAttribute("src", "logo.png");
   img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
   img.id = "logoEncabezado";
   header.appendChild(img);
@@ -18615,7 +18615,7 @@ const Login = () => {
 const Register = () => {
   const HomeDiv = document.createElement("main");
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/logo.png");
+  img.setAttribute("src", "logo.png");
   img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
   img.id = "logoEncabezadoRegister";
   const h2 = document.createElement("h2");
@@ -19384,7 +19384,7 @@ const Feed = () => {
   const header = document.createElement("header");
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/bannerM.png");
+  img.setAttribute("src", "bannerM.png");
   img.setAttribute("alt", "Banner Mam\xE1 Genial");
   img.id = "banner";
   header.appendChild(img);
