@@ -18537,6 +18537,7 @@ const refPost = () => {
 const editRef = (id2, text) => {
   return mf(mh(db, "post", id2), text);
 };
+const logo = "/assets/logo.9df56c4f.png";
 const Home = () => {
   const HomeDiv = document.createElement("section");
   const buttonRegister = document.createElement("button");
@@ -18549,7 +18550,7 @@ const Home = () => {
   buttonLoginGoogle.setAttribute("id", "idGoogle");
   const header = document.createElement("header");
   const img = document.createElement("img");
-  img.setAttribute("src", "logo.png");
+  img.setAttribute("src", logo);
   img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
   img.id = "logoEncabezado";
   header.appendChild(img);
@@ -18561,8 +18562,9 @@ const Home = () => {
   buttonLoginGoogle.addEventListener("click", () => {
     loginGoogle().then((credential) => {
       const user = credential.user;
-      console.log(user);
-      onNavigate("/feed");
+      if (user !== void 0) {
+        onNavigate("/feed");
+      }
     }).catch((error) => {
       console.log(error);
     });
@@ -18573,7 +18575,14 @@ const Home = () => {
   const inputPassword = document.createElement("input");
   inputPassword.placeholder = "Ingresa tu contrase\xF1a";
   inputPassword.setAttribute("type", "password");
-  article.append(h1, inputEmail, inputPassword, buttonLogin, buttonRegister, buttonLoginGoogle);
+  article.append(
+    h1,
+    inputEmail,
+    inputPassword,
+    buttonLogin,
+    buttonRegister,
+    buttonLoginGoogle
+  );
   main.appendChild(article);
   HomeDiv.appendChild(main);
   buttonRegister.addEventListener("click", () => onNavigate("/register"));
@@ -18615,7 +18624,7 @@ const Login = () => {
 const Register = () => {
   const HomeDiv = document.createElement("main");
   const img = document.createElement("img");
-  img.setAttribute("src", "logo.png");
+  img.setAttribute("src", logo);
   img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
   img.id = "logoEncabezadoRegister";
   const h2 = document.createElement("h2");
@@ -19379,12 +19388,13 @@ function waterfall(tasks, callback) {
   nextTask([]);
 }
 awaitify(waterfall);
+const bannerM = "/assets/bannerM.de63a643.png";
 const Feed = () => {
   const HomeDiv = document.createElement("div");
   const header = document.createElement("header");
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
-  img.setAttribute("src", "bannerM.png");
+  img.setAttribute("src", bannerM);
   img.setAttribute("alt", "Banner Mam\xE1 Genial");
   img.id = "banner";
   header.appendChild(img);

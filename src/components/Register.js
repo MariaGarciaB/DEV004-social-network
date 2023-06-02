@@ -1,6 +1,6 @@
 import { createUser, logOut } from '../lib/autenticar';
 import { onNavigate } from '../router/index';
-//import logo from '../img/logo.png';
+import logo from '../img/logo.png';
 
 //CREANDO ELEMENTOS DE REGISTER
 export const Register = () => {
@@ -14,8 +14,8 @@ export const Register = () => {
   HomeDiv.appendChild(header);*/
   const HomeDiv = document.createElement('main');
   const img = document.createElement('img');
-  //img.setAttribute('src', logo);
-  img.setAttribute('src', './img/logo.png');
+  img.setAttribute('src', logo);
+  // img.setAttribute('src', './img/logo.png');
   img.setAttribute('alt', 'Logo de la marca MaMá Genial');
   img.id = 'logoEncabezadoRegister';
   const h2 = document.createElement('h2');
