@@ -1,21 +1,11 @@
-import { createUser, logOut } from '../lib/autenticar';
+import { createUser } from '../lib/autenticar';
 import { onNavigate } from '../router/index';
-import logo from '../img/logo.png';
 
 //CREANDO ELEMENTOS DE REGISTER
 export const Register = () => {
-  /*const HomeDiv = document.createElement('section');
-  const header = document.createElement('header');
-  const img = document.createElement('img');
-  img.setAttribute('src', './img/logo.png');
-  img.setAttribute('alt', 'Logo de la marca MaMá Genial');
-  img.id = 'logoEncabezado';
-  header.appendChild(img);
-  HomeDiv.appendChild(header);*/
   const HomeDiv = document.createElement('main');
   const img = document.createElement('img');
-  img.setAttribute('src', logo);
-  // img.setAttribute('src', './img/logo.png');
+  img.setAttribute('src', './img/logo.png');
   img.setAttribute('alt', 'Logo de la marca MaMá Genial');
   img.id = 'logoEncabezadoRegister';
   const h2 = document.createElement('h2');
@@ -50,15 +40,15 @@ export const Register = () => {
       createUser(inputName.value, inputEmail.value, inputPassword.value)
         .then((res) => { // then para promesa cumplida
         // enviarlo al muro
+        buttonRegister.addEventListener('click', () => onNavigate('/feed'));
           console.log(res);
-          buttonRegister.addEventListener('click', () => onNavigate('/feed'));
         })
         .catch((error) => { // para promesa fallida
           console.log(error);
         });
     }
   });
-  
+ 
 
   HomeDiv.append(img, h2, inputName, inputEmail, inputPassword, buttonRegister, buttonHome);
 
