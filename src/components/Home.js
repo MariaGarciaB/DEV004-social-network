@@ -18,8 +18,8 @@ export const Home = () => {
   buttonLoginGoogle.setAttribute('id', 'idGoogle');
   const header = document.createElement('header');
   const img = document.createElement('img');
-  img.setAttribute('src', './img/logo.png');
-  img.setAttribute('alt', 'Logo de la marca MaMá Genial');
+  img.setAttribute('src', './img/MomToMom_Logo.JPG');
+  img.setAttribute('alt', 'Logo Mom to Mom');
   img.id = 'logoEncabezado';
   header.appendChild(img);
   HomeDiv.appendChild(header);
