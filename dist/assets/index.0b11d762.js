@@ -17827,8 +17827,8 @@ const Login = () => {
 const Register = () => {
   const HomeDiv = document.createElement("main");
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/logo.png");
-  img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
+  img.setAttribute("src", logoM);
+  img.setAttribute("alt", "Logo Mom to Mom");
   img.id = "logoEncabezadoRegister";
   const h2 = document.createElement("h2");
   h2.textContent = "Bienvenida al registro";

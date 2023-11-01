@@ -1,12 +1,13 @@
 import { createUser } from '../lib/autenticar';
 import { onNavigate } from '../router/index';
+import logoM from '../img/Logo.png';
 
 //CREANDO ELEMENTOS DE REGISTER
 export const Register = () => {
   const HomeDiv = document.createElement('main');
   const img = document.createElement('img');
-  img.setAttribute('src', './img/logo.png');
-  img.setAttribute('alt', 'Logo de la marca MaMá Genial');
+  img.setAttribute('src', logoM);
+  img.setAttribute('alt', 'Logo Mom to Mom');
   img.id = 'logoEncabezadoRegister';
   const h2 = document.createElement('h2');
   h2.textContent = 'Bienvenida al registro';
