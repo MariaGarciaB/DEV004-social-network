@@ -102,9 +102,7 @@ export const Feed = () => {
   const buttonCerrarSesion = document.createElement("button");
   buttonCerrarSesion.id = "cerrarSesion";
   // BOTON CERRAR SESIÓN Y EVENTO (interacción)
-  const iconCerrarSesion = document.createElement("i");
-iconCerrarSesion.className = ("fa fa-arrow-right-from-bracket");
-buttonCerrarSesion.appendChild(iconCerrarSesion);
+  buttonCerrarSesion.textContent = "Cerrar Sesión";
   buttonCerrarSesion.addEventListener("click", () => {
     logOut().then((resp) => onNavigate("/"));
   });
