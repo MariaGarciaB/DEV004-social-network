@@ -17755,8 +17755,8 @@ const Home = () => {
   buttonLoginGoogle.setAttribute("id", "idGoogle");
   const header = document.createElement("header");
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/logo.png");
-  img.setAttribute("alt", "Logo de la marca MaM\xE1 Genial");
+  img.setAttribute("src", "https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/MomToMom_Logo.JPG");
+  img.setAttribute("alt", "Logo Mom to Mom");
   img.id = "logoEncabezado";
   header.appendChild(img);
   HomeDiv.appendChild(header);
@@ -18592,17 +18592,13 @@ function waterfall(tasks, callback) {
 awaitify(waterfall);
 const Feed = () => {
   const HomeDiv = document.createElement("div");
-  HomeDiv.classList.add("overlay");
-  const container = document.createElement("div");
-  container.classList.add("container");
   const header = document.createElement("header");
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/logo.png");
-  img.setAttribute("alt", "Logo MaM\xE1 Genial");
-  img.id = "logoFeed";
+  img.setAttribute("src", "https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/banner2MomToMom.JPG");
+  img.setAttribute("alt", "Banner Mom to Mom");
+  img.id = "banner";
   header.appendChild(img);
-  HomeDiv.appendChild(header);
   const main = document.createElement("main");
   main.id = "muro";
   const inputFeed = document.createElement("input");
@@ -18621,7 +18617,7 @@ const Feed = () => {
   cf(refPost(), (querySnapshot) => {
     articlePost.innerHTML = "";
     querySnapshot.forEach((post) => {
-      console.log(post.data().email, post.data().comentario, post.data().date);
+      console.log(post.data().email, post.data().comentario);
       const p2 = document.createElement("p");
       p2.textContent = post.data().comentario;
       const strong = document.createElement("strong");
@@ -18630,7 +18626,9 @@ const Feed = () => {
       botonesPost.id = "btPost";
       const buttonEliminar = document.createElement("button");
       buttonEliminar.id = "eliminar";
-      buttonEliminar.textContent = "Eliminar";
+      const iconEliminar = document.createElement("i");
+      iconEliminar.classList.add("fas", "fa-trash");
+      buttonEliminar.appendChild(iconEliminar);
       buttonEliminar.addEventListener("click", async () => {
         await of(rh(db, "post", post.id));
       });
@@ -18653,6 +18651,7 @@ const Feed = () => {
         p2.style.display = "none";
         inputEditable.style.display = "block";
         buttonGuardar.style.display = "block";
+        buttonEliminar.style.display = "none";
       });
       const emailUser = actualUser().email;
       if (emailUser === post.data().email) {
@@ -18679,7 +18678,7 @@ const Feed = () => {
     logOut().then((resp) => onNavigate("/"));
   });
   nav.appendChild(buttonCerrarSesion);
-  HomeDiv.append(header, container, nav, main);
+  HomeDiv.append(header, nav, main);
   return HomeDiv;
 };
 addRoutes({

@@ -18,7 +18,7 @@ export const Home = () => {
   buttonLoginGoogle.setAttribute('id', 'idGoogle');
   const header = document.createElement('header');
   const img = document.createElement('img');
-  img.setAttribute('src', './img/MomToMom_Logo.JPG');
+  img.setAttribute('src', 'https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/MomToMom_Logo.JPG');
   img.setAttribute('alt', 'Logo Mom to Mom');
   img.id = 'logoEncabezado';
   header.appendChild(img);

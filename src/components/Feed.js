@@ -11,7 +11,7 @@ export const Feed = () => {
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
   // img.setAttribute("src", bannerM);
-  img.setAttribute('src', './img/banner2MomToMom.JPG');
+  img.setAttribute('src', 'https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/banner2MomToMom.JPG');
   img.setAttribute("alt", "Banner Mom to Mom");
   img.id = "banner";
   header.appendChild(img);
