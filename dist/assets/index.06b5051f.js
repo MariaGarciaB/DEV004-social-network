@@ -17739,6 +17739,7 @@ const refPost = () => {
 const editRef = (id2, text) => {
   return rf(rh(db, "post", id2), text);
 };
+const logoM = "/assets/Logo.9d1e994e.png";
 const Home = () => {
   const HomeDiv = document.createElement("section");
   HomeDiv.classList.add("container");
@@ -17755,7 +17756,7 @@ const Home = () => {
   buttonLoginGoogle.setAttribute("id", "idGoogle");
   const header = document.createElement("header");
   const img = document.createElement("img");
-  img.setAttribute("src", "https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/MomToMom_Logo.JPG");
+  img.setAttribute("src", logoM);
   img.setAttribute("alt", "Logo Mom to Mom");
   img.id = "logoEncabezado";
   header.appendChild(img);
@@ -18590,12 +18591,13 @@ function waterfall(tasks, callback) {
   nextTask([]);
 }
 awaitify(waterfall);
+const bannerM = "/assets/Banner.846bb0a1.png";
 const Feed = () => {
   const HomeDiv = document.createElement("div");
   const header = document.createElement("header");
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
-  img.setAttribute("src", "https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/banner2MomToMom.JPG");
+  img.setAttribute("src", bannerM);
   img.setAttribute("alt", "Banner Mom to Mom");
   img.id = "banner";
   header.appendChild(img);

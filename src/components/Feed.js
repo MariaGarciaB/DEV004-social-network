@@ -2,6 +2,7 @@ import { log } from "async";
 import { logOut, crearPost, refPost, db, editRef, actualUser } from "../lib/autenticar";
 import { onNavigate } from "../router/index";
 import { onSnapshot, doc, deleteDoc } from "@firebase/firestore";
+import bannerM from '../img/Banner.png';
 
 // CREAR ELEMENTOS DEL MURO
 export const Feed = () => {
@@ -10,8 +11,8 @@ export const Feed = () => {
   const header = document.createElement("header");
   header.id = "encabezadoFeed";
   const img = document.createElement("img");
-  // img.setAttribute("src", bannerM);
-  img.setAttribute('src', 'https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/banner2MomToMom.JPG');
+  img.setAttribute("src", bannerM);
+  // img.setAttribute('src', 'https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/banner2MomToMom.JPG');
   img.setAttribute("alt", "Banner Mom to Mom");
   img.id = "banner";
   header.appendChild(img);

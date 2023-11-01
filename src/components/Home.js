@@ -1,5 +1,6 @@
 import { onNavigate } from '../router/index';
 import { loginUser, loginGoogle } from '../lib/autenticar';
+import logoM from '../img/Logo.png';
 
 export const Home = () => {
   const HomeDiv = document.createElement('section');
@@ -18,7 +19,7 @@ export const Home = () => {
   buttonLoginGoogle.setAttribute('id', 'idGoogle');
   const header = document.createElement('header');
   const img = document.createElement('img');
-  img.setAttribute('src', 'https://github.com/MariaGarciaB/Red_Social/blob/main/src/img/MomToMom_Logo.JPG');
+  img.setAttribute('src', logoM);
   img.setAttribute('alt', 'Logo Mom to Mom');
   img.id = 'logoEncabezado';
   header.appendChild(img);
