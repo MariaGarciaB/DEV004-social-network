@@ -118,3 +118,5 @@ export const refPost = () => {
 
 export const editRef = (id, text) => {
 return updateDoc(doc(db, "post", id), text) };
+
+//revisando repositorio remoto
